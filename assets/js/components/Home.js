@@ -1,9 +1,9 @@
 // ./assets/js/components/Home.js
 
 import React, {Component} from 'react';
-import {Route, Switch,Redirect, Link, withRouter} from 'react-router-dom';
-import Users from './Users';
-import Posts from './Posts';
+import {Route, Switch, Redirect, Link, withRouter} from 'react-router-dom';
+import Customers from './Customers';
+import Companies from './Companies';
 
 class Home extends Component {
 
@@ -15,19 +15,19 @@ class Home extends Component {
                     <div className="collapse navbar-collapse" id="navbarText">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <Link className={"nav-link"} to={"/posts"}> Posts </Link>
+                                <Link className={"nav-link"} to={"/posts"}> Companies </Link>
                             </li>
 
                             <li className="nav-item">
-                                <Link className={"nav-link"} to={"/users"}> Users </Link>
+                                <Link className={"nav-link"} to={"/users"}> Customers </Link>
                             </li>
                         </ul>
                     </div>
                 </nav>
                 <Switch>
-                    <Redirect exact from="/" to="/users" />
-                    <Route path="/users" component={Users} />
-                    <Route path="/posts" component={Posts} />
+                    <Redirect exact from="/" to="/customers" />
+                    <Route path="/customers" component={Customers} />
+                    <Route path="/companies" component={Companies} />
                 </Switch>
             </div>
         )

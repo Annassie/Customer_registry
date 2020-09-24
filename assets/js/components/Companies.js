@@ -1,24 +1,24 @@
-// ./assets/js/components/Posts.js
+// ./assets/js/components/Companies.js
 
 import React, {Component} from 'react';
 import axios from 'axios';
 
 
-class Posts extends Component {
+class Companies extends Component {
     constructor() {
-        super();
+        super(1);
 
-        this.state = { posts: [], loading: true}
+        this.state = { companies: [], loading: true}
     }
 
     componentDidMount() {
-        this.getPosts();
+        this.getCompanies();
     }
 
-    getPosts() {
+    getCompanies() {
         axios.get(`https://jsonplaceholder.typicode.com/posts/`).then(res => {
-            const posts = res.data.slice(0,15);
-            this.setState({ posts, loading: false })
+            const companies = res.data.slice(0,15);
+            this.setState({ companies, loading: false })
         })
     }
 
@@ -29,7 +29,7 @@ class Posts extends Component {
                 <section className="row-section">
                     <div className="container">
                         <div className="row">
-                            <h2 className="text-center"><span>List of posts</span>Created with <i
+                            <h2 className="text-center"><span>List of companies</span>Created with <i
                                 className="fa fa-heart"></i> by yemiwebby </h2>
                         </div>
 
@@ -40,14 +40,14 @@ class Posts extends Component {
 
                         ) : (
                             <div className={'row'}>
-                                {this.state.posts.map(post =>
-                                    <div className="col-md-10 offset-md-1 row-block" key={post.id}>
+                                {this.state.companies.map(company =>
+                                    <div className="col-md-10 offset-md-1 row-block" key={company.id}>
                                         <ul id="sortable">
                                             <li>
                                                 <div className="media">
                                                     <div className="media-body">
-                                                        <h4>{post.title}</h4>
-                                                        <p>{post.body}</p>
+                                                        <h4>{company.title}</h4>
+                                                        <p>{company.body}</p>
                                                     </div>
                                                 </div>
                                             </li>
@@ -63,4 +63,4 @@ class Posts extends Component {
     }
 }
 
-export default Posts;
+export default Companies;

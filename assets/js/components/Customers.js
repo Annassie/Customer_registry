@@ -1,21 +1,21 @@
-// ./assets/js/components/Users.js
+// ./assets/js/components/Customers.js
 
 import React, {Component} from 'react';
 import axios from 'axios';
 
-class Users extends Component {
+class Customers extends Component {
     constructor() {
-        super();
-        this.state = { users: [], loading: true};
+        super(1);
+        this.state = { customers: [], loading: true};
     }
 
     componentDidMount() {
-        this.getUsers();
+        this.getCustomers();
     }
 
-    getUsers() {
-        axios.get(`http://127.0.0.1:8000/api/users`).then(users => {
-            this.setState({ users: users.data, loading: false})
+    getCustomers() {
+        axios.get(`http://127.0.0.1:8000/api/customers`).then(customers => {
+            this.setState({ customer: customers.data, loading: false})
         })
     }
 
@@ -26,8 +26,8 @@ class Users extends Component {
                 <section className="row-section">
                     <div className="container">
                         <div className="row">
-                            <h2 className="text-center"><span>List of users</span>Created with <i
-                                className="fa fa-heart"></i> by yemiwebby</h2>
+                            <h2 className="text-center"><span>List of customers</span>Created with
+                                <i className="fa fa-heart"></i> by yemiwebby</h2>
                         </div>
                         {loading ? (
                             <div className={'row text-center'}>
@@ -35,18 +35,18 @@ class Users extends Component {
                             </div>
                         ) : (
                             <div className={'row'}>
-                                { this.state.users.map(user =>
-                                    <div className="col-md-10 offset-md-1 row-block" key={user.id}>
+                                { this.state.customers.map(customer =>
+                                    <div className="col-md-10 offset-md-1 row-block" key={customer.id}>
                                         <ul id="sortable">
                                             <li>
                                                 <div className="media">
                                                     <div className="media-left align-self-center">
-                                                        <img className="rounded-circle"
-                                                             src={user.imageURL}/>
+                                                        <img alt="" className="rounded-circle"
+                                                             src={customer.imageURL}/>
                                                     </div>
                                                     <div className="media-body">
-                                                        <h4>{user.name}</h4>
-                                                        <p>{user.description}</p>
+                                                        <h4>{customer.name}</h4>
+                                                        <p>{customer.description}</p>
                                                     </div>
                                                     <div className="media-right align-self-center">
                                                         <a href="#" className="btn btn-default">Contact Now</a>
@@ -64,4 +64,4 @@ class Users extends Component {
         )
     }
 }
-export default Users;
+export default Customers;
