@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
@@ -12,56 +14,105 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
-        return $this->render('default/index.html.twig', [
-            'controller_name' => 'DefaultController',
-        ]);
+        return $this->render('default/index.html.twig');
+
+        //return $this->render('@HomeBundle/Default/index.html.twig');
     }
 
     /**
-     * @Route("/api/users", name="users")
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     * @Route("/api/companies", name="companies")
+     * @return Response
      */
-    public function getUsers()
+
+    public function getCompanies()
     {
-        $users = [
+        $companies = [
             [
                 'id' => 1,
                 'name' => 'Olususi Oluyemi',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-                'imageURL' => 'https://randomuser.me/api/portraits/women/50.jpg'
+                'phoneNum' => ''
             ],
             [
                 'id' => 2,
                 'name' => 'Camila Terry',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-                'imageURL' => 'https://randomuser.me/api/portraits/men/42.jpg'
+                'phoneNum' => ''
             ],
             [
                 'id' => 3,
                 'name' => 'Joel Williamson',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-                'imageURL' => 'https://randomuser.me/api/portraits/women/67.jpg'
+                'phoneNum' => ''
+
             ],
             [
                 'id' => 4,
                 'name' => 'Deann Payne',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-                'imageURL' => 'https://randomuser.me/api/portraits/women/50.jpg'
+                'phoneNum' => ''
+
             ],
             [
                 'id' => 5,
                 'name' => 'Donald Perkins',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-                'imageURL' => 'https://randomuser.me/api/portraits/men/89.jpg'
+                'phoneNum' => 'Madrid'
             ]
         ];
+
 
         $response = new Response();
 
         $response->headers->set('Content-Type', 'application/json');
         $response->headers->set('Access-Control-Allow-Origin', '*');
 
-        $response->setContent(json_encode($users));
+        $response->setContent(json_encode($companies));
+
+        return $response;
+    }
+
+    /**
+     * @Route("/api/add-customer", name="addCustomer")
+     * @return Response
+     */
+
+    public function addCustomer(EntityManagerInterface $entityManager)
+    {
+        $customer = new Customer();
+        $customer->setFirstName();
+        $customer->setLastName();
+        $customer->setAddress();
+
+        $entityManager->persist($customer);
+        $entityManager->flush();
+
+        $response = new Response();
+
+        $response->headers->set('Content-Type', 'application/json');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+
+        $response->setContent(json_encode($customers));
+
+        return $response;
+    }
+
+    /**
+     * @Route("/api/customers/{id}", name="customers")
+     * @return Response
+     */
+
+    public function getCustomers($id)
+    {
+        // dump display the variable or object
+        dump($id);
+        $customers = [
+
+        ];
+
+
+
+        $response = new Response();
+
+        $response->headers->set('Content-Type', 'application/json');
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+
+        $response->setContent(json_encode($customers));
 
         return $response;
     }
