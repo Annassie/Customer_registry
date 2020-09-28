@@ -1,12 +1,10 @@
-// ./assets/js/components/Companies.js
-
 import React, {Component} from 'react';
 import axios from 'axios';
 
 
 class Companies extends Component {
     constructor() {
-        super(1);
+        super();
 
         this.state = { companies: [], loading: true}
     }
@@ -16,9 +14,8 @@ class Companies extends Component {
     }
 
     getCompanies() {
-        axios.get(`https://jsonplaceholder.typicode.com/posts/`).then(res => {
-            const companies = res.data.slice(0,15);
-            this.setState({ companies, loading: false })
+        axios.get(`http://localhost:8000/api/companies`).then(companies => {
+            this.setState({ companies: companies.data, loading: false})
         })
     }
 
@@ -29,7 +26,7 @@ class Companies extends Component {
                 <section className="row-section">
                     <div className="container">
                         <div className="row">
-                            <h2 className="text-center"><span>List of companies</span>Created with <i
+                            <h2 className="text-center"><span>List of posts</span>Created with <i
                                 className="fa fa-heart"></i> by yemiwebby </h2>
                         </div>
 

@@ -1,11 +1,9 @@
-// ./assets/js/components/Customers.js
-
 import React, {Component} from 'react';
 import axios from 'axios';
 
 class Customers extends Component {
     constructor() {
-        super(1);
+        super();
         this.state = { customers: [], loading: true};
     }
 
@@ -14,8 +12,8 @@ class Customers extends Component {
     }
 
     getCustomers() {
-        axios.get(`http://127.0.0.1:8000/api/customers`).then(customers => {
-            this.setState({ customer: customers.data, loading: false})
+        axios.get(`http://localhost:8000/api/customers`).then(customers => {
+            this.setState({ customers: customers.data, loading: false})
         })
     }
 
@@ -25,9 +23,13 @@ class Customers extends Component {
             <div>
                 <section className="row-section">
                     <div className="container">
-                        <div className="row">
-                            <h2 className="text-center"><span>List of customers</span>Created with
-                                <i className="fa fa-heart"></i> by yemiwebby</h2>
+                        <div className={'row'}>
+                            {this.state.companies.props(company =>
+                                <div>
+                                    <h1 className="text-center" key={company.id}><span>{company.name}</span></h1>
+                                    <h2 className="text-center"><span>List of customers</span></h2>
+                                </div>
+                                )}
                         </div>
                         {loading ? (
                             <div className={'row text-center'}>
@@ -40,16 +42,10 @@ class Customers extends Component {
                                         <ul id="sortable">
                                             <li>
                                                 <div className="media">
-                                                    <div className="media-left align-self-center">
-                                                        <img alt="" className="rounded-circle"
-                                                             src={customer.imageURL}/>
-                                                    </div>
                                                     <div className="media-body">
                                                         <h4>{customer.name}</h4>
-                                                        <p>{customer.description}</p>
-                                                    </div>
-                                                    <div className="media-right align-self-center">
-                                                        <a href="#" className="btn btn-default">Contact Now</a>
+                                                        <h4>{customer.name}</h4>
+                                                        <p>{customer.address}</p>
                                                     </div>
                                                 </div>
                                             </li>

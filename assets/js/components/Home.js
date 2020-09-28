@@ -10,16 +10,12 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <Link className={"navbar-brand"} to={"/"}> Symfony React Project </Link>
+                <nav className="navbar navbar-expand-lg">
+                    <Link className={"navbar-brand"} to={"/"}> Customers Registry</Link>
                     <div className="collapse navbar-collapse" id="navbarText">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <Link className={"nav-link"} to={"/posts"}> Companies </Link>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link className={"nav-link"} to={"/users"}> Customers </Link>
+                                <Link className={"nav-link"} to={"/companies"}> Companies </Link>
                             </li>
                         </ul>
                     </div>
