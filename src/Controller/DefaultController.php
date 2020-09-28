@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Customers;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,38 +25,10 @@ class DefaultController extends AbstractController
      * @return Response
      */
 
-    public function getCompanies()
+    public function getCompanies(EntityManagerInterface $entityManager)
     {
-        $companies = [
-            [
-                'id' => 1,
-                'name' => 'Olususi Oluyemi',
-                'phoneNum' => ''
-            ],
-            [
-                'id' => 2,
-                'name' => 'Camila Terry',
-                'phoneNum' => ''
-            ],
-            [
-                'id' => 3,
-                'name' => 'Joel Williamson',
-                'phoneNum' => ''
-
-            ],
-            [
-                'id' => 4,
-                'name' => 'Deann Payne',
-                'phoneNum' => ''
-
-            ],
-            [
-                'id' => 5,
-                'name' => 'Donald Perkins',
-                'phoneNum' => 'Madrid'
-            ]
-        ];
-
+        // getRepository get the Entity
+        $companies= $entityManager->getRepository(Customers::class)->findBy([]);
 
         $response = new Response();
 
@@ -79,6 +52,7 @@ class DefaultController extends AbstractController
         $customer->setLastName();
         $customer->setAddress();
 
+        // adding to the Entity
         $entityManager->persist($customer);
         $entityManager->flush();
 
@@ -93,26 +67,21 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/api/customers/{id}", name="customers")
+     * @Route("/api/customers", name="customers")
      * @return Response
      */
 
-    public function getCustomers($id)
+    public function getCustomers(EntityManagerInterface $entityManager)
     {
-        // dump display the variable or object
-        dump($id);
-        $customers = [
-
-        ];
-
-
+        // getRepository get the Entity
+        $customers= $entityManager->getRepository(Customers::class)->findBy([]);
 
         $response = new Response();
 
         $response->headers->set('Content-Type', 'application/json');
         $response->headers->set('Access-Control-Allow-Origin', '*');
 
-        $response->setContent(json_encode($customers));
+        $response->setContent(json_encode($companies));
 
         return $response;
     }
