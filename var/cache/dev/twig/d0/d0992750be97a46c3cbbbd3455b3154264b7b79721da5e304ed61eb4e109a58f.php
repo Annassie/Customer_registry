@@ -482,6 +482,6 @@ class __TwigTemplate_a30c689edc81367df92735e4df491d56959d303ecc607e661c69f5974a0
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
     }
 }

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619
+class ComposerStaticInitbfee0af1f8c6385d639f3cd7de44c0b9
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -41,6 +41,7 @@ class ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619
         ),
         'S' => 
         array (
+            'Symfony\\WebpackEncoreBundle\\' => 28,
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Php73\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -175,6 +176,10 @@ class ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\WebpackEncoreBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
@@ -552,6 +557,8 @@ class ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619
     );
 
     public static $classMap = array (
+        'App\\Controller\\DeafaultController' => __DIR__ . '/../..' . '/src/Controller/DeafaultController.php',
+        'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Command\\CreateDatabaseDoctrineCommand' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Command\\DoctrineCommand' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Command/DoctrineCommand.php',
@@ -4732,6 +4739,21 @@ class ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'Symfony\\Polyfill\\Php73\\Php73' => __DIR__ . '/..' . '/symfony/polyfill-php73/Php73.php',
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
+        'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookup' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookup.php',
+        'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookupCollection' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookupCollection.php',
+        'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookupCollectionInterface' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookupCollectionInterface.php',
+        'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookupInterface' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookupInterface.php',
+        'Symfony\\WebpackEncoreBundle\\Asset\\IntegrityDataProviderInterface' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/IntegrityDataProviderInterface.php',
+        'Symfony\\WebpackEncoreBundle\\Asset\\TagRenderer' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/TagRenderer.php',
+        'Symfony\\WebpackEncoreBundle\\CacheWarmer\\EntrypointCacheWarmer' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/CacheWarmer/EntrypointCacheWarmer.php',
+        'Symfony\\WebpackEncoreBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/DependencyInjection/Configuration.php',
+        'Symfony\\WebpackEncoreBundle\\DependencyInjection\\WebpackEncoreExtension' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/DependencyInjection/WebpackEncoreExtension.php',
+        'Symfony\\WebpackEncoreBundle\\EventListener\\ExceptionListener' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/EventListener/ExceptionListener.php',
+        'Symfony\\WebpackEncoreBundle\\EventListener\\PreLoadAssetsEventListener' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/EventListener/PreLoadAssetsEventListener.php',
+        'Symfony\\WebpackEncoreBundle\\Exception\\EntrypointNotFoundException' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Exception/EntrypointNotFoundException.php',
+        'Symfony\\WebpackEncoreBundle\\Exception\\UndefinedBuildException' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Exception/UndefinedBuildException.php',
+        'Symfony\\WebpackEncoreBundle\\Twig\\EntryFilesTwigExtension' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Twig/EntryFilesTwigExtension.php',
+        'Symfony\\WebpackEncoreBundle\\WebpackEncoreBundle' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/WebpackEncoreBundle.php',
         'Twig\\Cache\\CacheInterface' => __DIR__ . '/..' . '/twig/twig/src/Cache/CacheInterface.php',
         'Twig\\Cache\\FilesystemCache' => __DIR__ . '/..' . '/twig/twig/src/Cache/FilesystemCache.php',
         'Twig\\Cache\\NullCache' => __DIR__ . '/..' . '/twig/twig/src/Cache/NullCache.php',
@@ -5116,10 +5138,10 @@ class ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitdfda8fd058b36eb26aaa51d4f3928619::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbfee0af1f8c6385d639f3cd7de44c0b9::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbfee0af1f8c6385d639f3cd7de44c0b9::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitbfee0af1f8c6385d639f3cd7de44c0b9::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitbfee0af1f8c6385d639f3cd7de44c0b9::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -135,6 +135,6 @@ class __TwigTemplate_ce1e5c0f5086951f2c1b83e90f81576dc65cad4cb0d0943fd8fc046325f
         {% endfor %}
     </tbody>
 </table>
-", "@WebProfiler/Profiler/bag.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/bag.html.twig");
+", "@WebProfiler/Profiler/bag.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/bag.html.twig");
     }
 }

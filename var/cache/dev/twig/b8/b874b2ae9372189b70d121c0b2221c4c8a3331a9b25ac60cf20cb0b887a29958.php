@@ -63,6 +63,6 @@ class __TwigTemplate_9a2c931380fa6f20ce77966bdaa073c8f94101d5b4c9093ab0b05d8bb16
     public function getSourceContext()
     {
         return new Source("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"#AAA\" d=\"M2.6 17.5h18.8c.9 0 1.6.7 1.6 1.6v1.5c0 1-.7 1.6-1.6 1.6H2.6c-.9 0-1.6-.7-1.6-1.6v-1.5c0-.9.7-1.6 1.6-1.6zM1 11.2v1.6c0 .9.7 1.6 1.6 1.6h18.8c.9 0 1.6-.7 1.6-1.6v-1.6c0-.8-.7-1.6-1.6-1.6H2.6A1.6 1.6 0 0 0 1 11.2zm0-7.8v1.5a1.6 1.6 0 0 0 1.6 1.6h18.8c.9 0 1.6-.7 1.6-1.6V3.4c0-1-.7-1.6-1.6-1.6H2.6A1.6 1.6 0 0 0 1 3.4z\"/></svg>
-", "@WebProfiler/Icon/menu.svg", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Icon/menu.svg");
+", "@WebProfiler/Icon/menu.svg", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Icon/menu.svg");
     }
 }

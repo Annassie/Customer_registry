@@ -1558,6 +1558,6 @@ class __TwigTemplate_8574b22ffa65694de26761a80cf46809295b8ee8b287ee097ae50aaf7cd
         </small>
     {%- endif -%}
 {%- endblock form_help %}
-", "bootstrap_4_layout.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/twig-bridge/Resources/views/Form/bootstrap_4_layout.html.twig");
+", "bootstrap_4_layout.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/twig-bridge/Resources/views/Form/bootstrap_4_layout.html.twig");
     }
 }

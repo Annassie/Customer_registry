@@ -193,6 +193,6 @@ class __TwigTemplate_e3a8c0bebbb85da078cc4179137c6b40280f06af1a4f9783a274ef1f014
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }

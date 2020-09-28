@@ -12,7 +12,7 @@ class Customers extends Component {
     }
 
     getCustomers() {
-        axios.get(`http://localhost:8000/api/customers`).then(customers => {
+        axios.get(`http://localhost:8889/api/customers`).then(customers => {
             this.setState({ customers: customers.data, loading: false})
         })
     }
@@ -33,7 +33,7 @@ class Customers extends Component {
                         </div>
                         {loading ? (
                             <div className={'row text-center'}>
-                                <span className="fa fa-spin fa-spinner fa-4x"></span>
+                                <span className="fa fa-spin fa-spinner fa-4x"/>
                             </div>
                         ) : (
                             <div className={'row'}>
@@ -43,8 +43,8 @@ class Customers extends Component {
                                             <li>
                                                 <div className="media">
                                                     <div className="media-body">
-                                                        <h4>{customer.name}</h4>
-                                                        <h4>{customer.name}</h4>
+                                                        <p>{customer.firstName}</p>
+                                                        <p>{customer.lastName}</p>
                                                         <p>{customer.address}</p>
                                                     </div>
                                                 </div>

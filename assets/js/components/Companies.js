@@ -14,7 +14,7 @@ class Companies extends Component {
     }
 
     getCompanies() {
-        axios.get(`http://localhost:8000/api/companies`).then(companies => {
+        axios.get(`http://localhost:8889/api/companies`).then(companies => {
             this.setState({ companies: companies.data, loading: false})
         })
     }
@@ -26,13 +26,12 @@ class Companies extends Component {
                 <section className="row-section">
                     <div className="container">
                         <div className="row">
-                            <h2 className="text-center"><span>List of posts</span>Created with <i
-                                className="fa fa-heart"></i> by yemiwebby </h2>
+                            <h2 className="text-center"><span>List of companies</span></h2>
                         </div>
 
                         {loading ? (
                             <div className={'row text-center'}>
-                                <span className="fa fa-spin fa-spinner fa-4x"></span>
+                                <span className="fa fa-spin fa-spinner fa-4x"/>
                             </div>
 
                         ) : (
@@ -43,8 +42,8 @@ class Companies extends Component {
                                             <li>
                                                 <div className="media">
                                                     <div className="media-body">
-                                                        <h4>{company.title}</h4>
-                                                        <p>{company.body}</p>
+                                                        <p>{company.name}</p>
+                                                        <p>{company.phoneNum}</p>
                                                     </div>
                                                 </div>
                                             </li>

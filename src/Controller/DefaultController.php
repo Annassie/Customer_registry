@@ -16,8 +16,6 @@ class DefaultController extends AbstractController
     public function index()
     {
         return $this->render('default/index.html.twig');
-
-        //return $this->render('@HomeBundle/Default/index.html.twig');
     }
 
     /**
@@ -31,12 +29,6 @@ class DefaultController extends AbstractController
         $companies= $entityManager->getRepository(Customers::class)->findBy([]);
 
         $response = new Response();
-
-        $response->headers->set('Content-Type', 'application/json');
-        $response->headers->set('Access-Control-Allow-Origin', '*');
-
-        $response->setContent(json_encode($companies));
-
         return $response;
     }
 
@@ -58,11 +50,6 @@ class DefaultController extends AbstractController
 
         $response = new Response();
 
-        $response->headers->set('Content-Type', 'application/json');
-        $response->headers->set('Access-Control-Allow-Origin', '*');
-
-        $response->setContent(json_encode($customers));
-
         return $response;
     }
 
@@ -77,11 +64,6 @@ class DefaultController extends AbstractController
         $customers= $entityManager->getRepository(Customers::class)->findBy([]);
 
         $response = new Response();
-
-        $response->headers->set('Content-Type', 'application/json');
-        $response->headers->set('Access-Control-Allow-Origin', '*');
-
-        $response->setContent(json_encode($companies));
 
         return $response;
     }

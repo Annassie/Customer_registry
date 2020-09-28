@@ -413,6 +413,6 @@ class __TwigTemplate_800410c59c624577549f6d2c2f10455438aab3da884c722de8a318d5750
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

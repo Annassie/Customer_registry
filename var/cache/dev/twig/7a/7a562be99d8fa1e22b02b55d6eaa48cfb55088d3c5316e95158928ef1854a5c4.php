@@ -227,6 +227,6 @@ class __TwigTemplate_da71e2facad2a2d14fb28042eac02010c512da5148379a3739e18df0290
         </div>
     </form>
 </div>
-", "@WebProfiler/Profiler/search.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/search.html.twig");
+", "@WebProfiler/Profiler/search.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/search.html.twig");
     }
 }

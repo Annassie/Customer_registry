@@ -2080,6 +2080,6 @@ class __TwigTemplate_1669bcf7600f907a5542d5a6fd6e4eddd10ef49ba1baed7120a1760e7d5
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

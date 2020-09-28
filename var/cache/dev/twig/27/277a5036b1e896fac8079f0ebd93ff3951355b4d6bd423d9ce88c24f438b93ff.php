@@ -173,6 +173,6 @@ class __TwigTemplate_b2126c8fbc8e5fb34af4fa2e376e6fc4c09007e15b4a7396aab06045c1c
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Users/annaniukkanen/symfony/customer_registry/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/templates/base.html.twig");
     }
 }

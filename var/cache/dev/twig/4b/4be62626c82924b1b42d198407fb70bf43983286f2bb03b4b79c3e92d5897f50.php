@@ -803,6 +803,6 @@ class __TwigTemplate_902deb6c4f81d9300604b5cea2fc9795f064ac820d12f086ddcfdf87873
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
     }
 }

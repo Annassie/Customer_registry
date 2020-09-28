@@ -2,7 +2,6 @@
 
 import React, {Component} from 'react';
 import {Route, Switch, Redirect, Link, withRouter} from 'react-router-dom';
-import Customers from './Customers';
 import Companies from './Companies';
 
 class Home extends Component {
@@ -21,8 +20,7 @@ class Home extends Component {
                     </div>
                 </nav>
                 <Switch>
-                    <Redirect exact from="/" to="/customers" />
-                    <Route path="/customers" component={Customers} />
+                    <Redirect exact from="/" to="/companies" />
                     <Route path="/companies" component={Companies} />
                 </Switch>
             </div>

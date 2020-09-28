@@ -479,6 +479,6 @@ class __TwigTemplate_a531eee585f98c1e0f5d0f3de4e2d046996d1081eb12e4a1bdbd72e95be
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/validator.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
+", "@WebProfiler/Collector/validator.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
     }
 }

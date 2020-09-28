@@ -1882,6 +1882,6 @@ class __TwigTemplate_963abb00939110e79753ad55fc16221ac83265bbad3e0383d2f0ca98571
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/Users/annaniukkanen/symfony/customer_registry/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/Applications/MAMP/htdocs/symfony/customer_registry/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }
